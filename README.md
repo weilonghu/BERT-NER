@@ -2,6 +2,15 @@
 
 **This project implements an solution mostly based on [weizhepei](https://github.com/weizhepei/BERT-NER)'s work and [chnsh](https://github.com/chnsh/BERT-NER-CoNLL)'s work.**
 
+|   | precision | recall| f1-score | support |
+| ---- | ----| ---- | ---- | ---- |
+| LOC | 0.93 | 0.94 | 0.93 | 1656 |
+| PER | 0.95 | 0.97 | 0.96 | 1606 |
+| ORG | 0.90 | 0.90 | 0.90 | 1642 |
+| MISC | 0.80 | 0.82 | 0.81 | 694 |
+| micro avg | 0.91 | 0.92 | 0.92 | 5598 |
+| macro avg | 0.91 | 0.92 | 0.92 | 5598 |
+
 ## Dataset
 
 - Chinese: [MSRA](http://sighan.cs.uchicago.edu/bakeoff2006/), which is [reported](https://github.com/lemonhu/NER-BERT-pytorch/issues/9) to be incomplete. A complete version can be found [here](https://github.com/buppt/ChineseNER/tree/master/data/MSRA).
