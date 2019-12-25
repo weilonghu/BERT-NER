@@ -105,6 +105,3 @@ venv.bak/
 
 # vscode
 .vscode
-data
-pretrained_bert_models
-experiments
