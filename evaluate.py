@@ -76,7 +76,7 @@ def evaluate(model, data_iterator, params, mark='Eval', verbose=False):
     f1 = f1_score(true_tags, pred_tags)
     metrics['loss'] = loss_avg()
     metrics['f1'] = f1
-    metrics_str = "; ".join("{}: {:05.2f}".format(k, v)
+    metrics_str = "; ".join("{}: {:05.4f}".format(k, v)
                             for k, v in metrics.items())
     logging.info("- {} metrics: ".format(mark) + metrics_str)
 
@@ -140,6 +140,7 @@ if __name__ == '__main__':
     # model = BertForTokenClassification(config, num_labels=len(params.tag2idx))
     # model = BertForSequenceTagging(config)
     model = BertForSequenceTagging.from_pretrained(tagger_model_dir)
+    model.device = params.device
     model.to(params.device)
 
     if args.fp16:
